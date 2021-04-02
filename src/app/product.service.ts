@@ -16,6 +16,7 @@ export class ProductService {
     return this.httpClient.get<any[]>(this.serverUrl);
   }
 
+  /* Deleting Product */
   deleteProduct(prodId: any): Observable<any> {
     return this.httpClient.delete<{ message?: string, status: string }>(`${this.serverUrl}/delete/${prodId}`)
       .pipe(
